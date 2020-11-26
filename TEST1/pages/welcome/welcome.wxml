@@ -1,3 +1,8 @@
-<view>
-  <text>Hello World</text>
+<view class="container">
+  <image class="user-avatar" src="/images/phone.jpg"></image>
+  <text class="user-name">Hello,Your Name</text>
+  <view>
+    <text class="moto">开启小程序之旅</text>
+  </view>
+  <!-- <button></button> -->
 </view>
