@@ -1,0 +1,13 @@
+.news_navigationBar {
+  width: 100%;
+  height: 135rpx;
+  text-align:center;
+  line-height: 155rpx; 
+  color: white;
+  font-weight:bold;
+  background:linear-gradient(to right, #1c50e0, #000046);
+}
+swiper {
+  width: 100%;
+  height: 500rpx;
+}

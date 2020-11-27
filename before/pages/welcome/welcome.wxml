@@ -1,7 +1,5 @@
-<cu-custom bgColor="bg-gradual-blue">
-  <view slot="content">开启小程序之旅</view>
-</cu-custom>
 <view class="container">
+  <!-- <view class="ns_navigationBar"></view> -->
   <image class="user-avatar" src="/images/phone.jpg"></image>
   <text class="user-name">Your Name</text>
   <button class="moto">开启小程序之旅</button>

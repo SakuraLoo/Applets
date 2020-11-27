@@ -1,0 +1,12 @@
+
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+/* .ns_navigationBar {
+  width: 100%;
+  height: 135rpx;
+  text-align:center;
+  line-height: 155rpx; 
+  color: white;
+  font-weight:bold;
+  background:linear-gradient(to right, rgb(173, 225, 255) , #614AF8);
+} */

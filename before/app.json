@@ -1,0 +1,10 @@
+{
+  "pages": [
+    "pages/posts/posts",
+    "pages/welcome/welcome"
+  ],
+  "window":{
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": true
+  }
+}

@@ -1,0 +1,12 @@
+<view>
+  <!-- <view class="news_navigationBar">今日快讯</view> -->
+  <swiper
+    indicator-dots="true"
+    autoplay="true"
+    interval="2000"
+  >
+    <swiper-item><image src="/images/swiper/1.jpg"></image></swiper-item>
+    <swiper-item><image src="/images/swiper/2.png"></image></swiper-item>
+    <swiper-item><image src="/images/swiper/3.png"></image></swiper-item>
+  </swiper>
+</view>
