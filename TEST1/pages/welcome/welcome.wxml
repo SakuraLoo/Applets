@@ -1,8 +1,5 @@
-<cu-custom bgColor="bg-gradual-blue">
-  <view slot="content">开启小程序之旅</view>
-</cu-custom>
 <view class="container">
-  <image class="user-avatar" src="/images/phone.jpg"></image>
+  <image class="user-avatar" src="https://img.alicdn.com/tps/TB1ld1GNFXXXXXLapXXXXXXXXXX-200-200.png"></image>
   <text class="user-name">Your Name</text>
-  <button class="moto">开启小程序之旅</button>
+  <button class="cu-btn lines-black" bindtap="ToPost">开启小程序之旅</button>
 </view>

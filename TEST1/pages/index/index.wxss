@@ -1,0 +1,10 @@
+.ele_bold {
+  color: #1CBBB4;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.ele_title {
+  margin: 2px;
+  font-weight: bold;
+  text-decoration: underline;
+}

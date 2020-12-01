@@ -1,17 +1,20 @@
-<cu-custom bgColor="bg-gradual-blue">
-  <view slot="content">ColorUI 空白模板</view>
-</cu-custom>
-<view class="margin-xl padding-xl bg-white radius shadow shadow-lg">
-  <view class="flex justify-center">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
-    <block wx:else>
-      <view class='text-center'>
-        <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
-        <view class="padding">{{userInfo.nickName}}</view>
-      </view>
-    </block>
+<view>
+  <view class="ele_bold">一.数据绑定 - 1.data</view>
+  <view class="ele_title">a.文字 :</view>
+  <text> {{ "Hello," + text }} </text>
+  <view class="ele_bold">一.数据绑定 - 2.setData</view>
+  <view class="ele_title">b.图片 :</view>
+  <image src="{{ postContent.img }}"></image>
+  <view class="ele_title">c.计算 :</view>
+  <text> {{ a + b + c }} </text>
+  <view class="ele_bold">二.条件渲染 if :</view>
+  <text wx:if="{{ text }}"></text>
+  <view class="ele_bold">二.列表渲染 for :</view>
+  <view wx:for="{{ arr }}" wx:for-item="item" wx:index="index">
+    <text> {{ item }} </text>
   </view>
-</view>
-<view class="text-center margin-top">
-  <text class="text-grey text-xl">{{motto}}</text>
+  <view class="ele_bold">一.数据绑定 - 3.setData赋值给data</view>
+  <text> {{ thisString }} </text>
+  <view class="ele_bold">三.绑定事件函数</view>
+  <button bindtap="ClickMe">点击</button>
 </view>

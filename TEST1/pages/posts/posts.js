@@ -1,11 +1,15 @@
 // pages/posts/posts.js
-Page({
 
+var postsData = require("../../data/posts-data.js");
+console.log(postsData)
+
+Page({
+  // 产生事件 捕捉事件 回调函数 处理事件
   /**
    * 页面的初始数据
    */
   data: {
-    date: "2019年12月3日"
+    postContent: {}
   },
 
   /**
@@ -18,9 +22,15 @@ Page({
       img: "https://p4.img.cctvpic.com/photoworkspace/2020/11/26/2020112611331486119.jpg",
       text: "巨型冰山A68于2017年从南极拉森-C冰架上脱离，现在由这座冰山分裂出的A68a冰山正朝着大西洋南部的野生动物天堂南乔治亚岛漂移，将于本月底或下月初漂移至位于大西洋的南乔治亚岛近海，并且有可能会与乔治亚岛发生碰撞。",
       viewNum: "112",
-      collectNum: "96",
-      authorPhoto: "https://p4.img.cctvpic.com/photoworkspace/2020/11/26/2020112611331486119.jpg"
+      likeNum: "96",
+      commentNum: "20",
+      authorPhoto: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+      postArr: [1,2,3]
     }
+    this.setData({
+      postContent: post_content
+    })
+
   },
 
   /**
