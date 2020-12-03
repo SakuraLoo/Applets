@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/posts/post-detail/post-detail",
     "pages/welcome/welcome",
     "pages/posts/posts",
     "pages/index/index"
@@ -7,7 +8,7 @@
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
   },
-  "window":{
+  "window": {
     "navigationBarBackgroundColor": "#5f6b72"
   },
   "sitemapLocation": "sitemap.json"

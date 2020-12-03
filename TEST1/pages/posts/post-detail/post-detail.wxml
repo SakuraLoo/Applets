@@ -1,0 +1,23 @@
+<!--pages/posts/post-detail/post-detail.wxml-->
+
+<view class="container">
+  <image class="head-image" src="https://p4.img.cctvpic.com/photoworkspace/2020/11/26/2020112611331486119.jpg"></image>
+  <view class="author-date">
+    <image class="avatar" src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"></image>
+    <text class="author">林百一</text>
+    <text class="const-date">发表于</text>
+    <text class="date">2小时前</text>
+  </view>
+  <view>
+    <text>冰山撞岛屿，并不是一场美丽邂逅。</text>
+  </view>
+  <view>
+    <view>
+      <image src="/images/icon/collection.png"></image>
+      <image src="/images/icon/share.png"></image>
+    </view>
+    <view>
+      <text></text>
+    </view>
+  </view>
+</view>

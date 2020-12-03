@@ -1,47 +1,21 @@
+<import src="/pages/posts/post-item/post-item-template.wxml"/>
+
 <view>
   <swiper
     vertical="{{false}}"
     indicator-dots="{{true}}"
     autoplay="{{true}}"
     interval="2000"
-  >
+  >                                                                                
     <swiper-item><image src="/images/swiper/1.jpg"></image></swiper-item>
     <swiper-item><image src="/images/swiper/2.png"></image></swiper-item>
     <swiper-item><image src="/images/swiper/3.png"></image></swiper-item>
   </swiper>
 
-  <view class="cu-card">
-    <view class="cu-item item_con">
-      <view class="cu-list menu-avatar">
-        <view class="cu-item">
-          <view class="cu-avatar round lg">
-            <image src="{{ postContent.authorPhoto }}"></image>
-          </view>
-          <view class="content flex-sub">
-            <view class="text-gray text-sm flex justify-between">
-              {{ postContent.date }}
-            </view>
-          </view>
-        </view>
-      </view>
-      <view class="grid flex-sub padding-lr" class="col-3">
-        <view class="text-content item_title">
-          {{ postContent.title }}
-        </view>
-        <view class="bg-img" style="height: 200px;">
-          <image src="{{ postContent.img }}"></image>
-        </view>
-      </view>
-      <view class="text-content item_text">
-        {{ postContent.text }}
-      </view>
-      <view class="text-gray text-sm text-right padding">
-        <text class="cuIcon-attentionfill margin-lr-xs"></text> {{ postContent.viewNum }}
-        <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{ postContent.likeNum }}
-        <text class="cuIcon-messagefill margin-lr-xs"></text> {{ postContent.commentNum }}
-      </view>
-
+  <block class="cu-card" wx:for="{{postArr}}" wx:for-item="item" wx:key="index">
+    <view bind:tap="onPostTap" data-postId="{{item.postId}}">
+      <template is="postItem" data="{{...item}}"></template>
     </view>
-  </view>
+  </block>
 
 </view>

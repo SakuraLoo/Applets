@@ -1,5 +1,6 @@
-var posts_content = [
+var local_database = [
   {
+    postId: 0,
     date: "2020/11/27",
     title: "冰山撞岛屿，并不是一场美丽邂逅。",
     img: "https://p4.img.cctvpic.com/photoworkspace/2020/11/26/2020112611331486119.jpg",
@@ -10,14 +11,26 @@ var posts_content = [
     authorPhoto: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"
   },
   {
+    postId: 1,
     date: "2020/12/01",
-    title: "工信部责令1336款APP整改 严查违规收集个人信息行为。",
-    img: "https://p4.img.cctvpic.com/photoworkspace/2020/12/01/2020120117003165792.jpg",
-    text: "新技术不断催生新产品、新模式、新业态的同时，一些APP侵害用户权益问题也在显现，对违规APP进行整治是当务之急。工信部将加大力度，从2021年初继续开展为期半年的专项整治行动，对有令不行、整改不彻底、反复出现问题、搞技术对抗的企业和APP采取停止接入、行政处罚及信用管理等严厉处置措施。",
-    viewNum: "50",
-    likeNum: "66",
-    commentNum: "15",
-    authorPhoto: "https://iconfont.alicdn.com/t/6e56d2ab-90ba-465b-8d92-30ab28b592fd.png@100h_100w.jpg"
+    title: "高值医用耗材国家集采扩围 再增六大品类。",
+    img: "https://p5.img.cctvpic.com/photoworkspace/2020/12/03/2020120305512361936.jpg",
+    text: "日前相关部门下发《关于开展高值医用耗材第二批集中采购数据快速采集与价格监测的通知》（以下简称《通知》）。",
+    viewNum: "86",
+    likeNum: "77",
+    commentNum: "14",
+    authorPhoto: "https://profile.csdnimg.cn/F/1/0/3_steptodream"
+  },
+  {
+    postId: 2,
+    date: "2020/12/03",
+    title: "前10月PPP投资已超1.2万亿元 多路万亿级资金加速涌入“两新一重”。",
+    img: "https://p5.img.cctvpic.com/photoworkspace/2020/12/03/2020120305462958727.jpg",
+    text: "最新数据显示，前10月PPP新入库项目投资额已超1.2万亿元。今年超3万亿元新增专项债中也有相当比例用于支持“两新一重”项目。",
+    viewNum: "155",
+    likeNum: "54",
+    commentNum: "21",
+    authorPhoto: "https://profile.csdnimg.cn/3/6/1/3_xianglitian"
   }
 ]
 

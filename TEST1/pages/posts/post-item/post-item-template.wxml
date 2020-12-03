@@ -1,0 +1,32 @@
+<template name="postItem">
+  <view class="cu-item item_con">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg">
+          <image src="{{ authorPhoto }}"></image>
+        </view>
+        <view class="content flex-sub">
+          <view class="text-gray text-sm flex justify-between">
+            {{ date }}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="grid flex-sub padding-lr" class="col-3">
+      <view class="text-content item_title">
+        {{ title }}
+      </view>
+      <view class="bg-img" style="height: 200px;">
+        <image src="{{ img }}"></image>
+      </view>
+    </view>
+    <view class="text-content item_text">
+      {{ text }}
+    </view>
+    <view class="text-gray text-sm text-right padding">
+      <text class="cuIcon-attentionfill margin-lr-xs"></text> {{ viewNum }}
+      <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{ likeNum }}
+      <text class="cuIcon-messagefill margin-lr-xs"></text> {{ commentNum }}
+    </view>
+  </view>
+</template>
