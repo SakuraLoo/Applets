@@ -1,66 +1,61 @@
-// pages/posts/post-detail/post-detail.js
+var postsData = require("../../../data/posts-data");
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    postData: {},
+    isCollectActive: "",
+    isShareActive: ""
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
+    // 本页面数据
+    var postId = options.id;
+    var postData = postsData.postList[postId];
 
+    // 几天前
+    var time = new Date()*1 - new Date(postData.date)*1;
+    var until = parseInt(time/86400000);
+    if(until<=7) {
+      postData.date = parseInt(time/86400000) + "天前";
+    }
+
+    // 读取缓存，是否收藏或分享
+    var data = wx.getStorageSync('post'); // 获取缓存
+    var isCollectActive = data.collect == true ? "active" : ""; // 点击为active，再次点击为""
+    var isShareActive = data.share == true ? "active" : ""; // 点击为active，再次点击为""
+
+    // 绑定数据
+    this.setData({
+      ...postData,
+      isCollectActive: isCollectActive,
+      isShareActive: isShareActive
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  /*-- 点击收藏 --*/
+  CollectClick () {
+    // 修改缓存
+    var data = wx.getStorageSync('post'); // 获取缓存
+    data.collect = data.collect == true ? false : true; // 点击为true，再次点击为false
+    wx.setStorageSync('post', data); // 缓存数据
 
+    // 修改class
+    var isCollectActive = data.collect == true ? "active" : ""; // 点击为active，再次点击为""
+    this.setData({
+      isCollectActive: isCollectActive // 绑定数据
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+  /*-- 点击分享 --*/
+  ShareClick () {
+    // 修改缓存
+    var data = wx.getStorageSync('post'); // 获取缓存
+    data.share = data.share == true ? false : true; // 点击为true，再次点击为false
+    wx.setStorageSync('post', data); // 缓存数据
 
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    // 修改class
+    var isShareActive = data.share == true ? "active" : ""; // 点击为active，再次点击为""
+    this.setData({
+      isShareActive: isShareActive // 绑定数据
+    })
   }
 })
