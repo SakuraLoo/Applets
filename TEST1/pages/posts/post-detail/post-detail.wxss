@@ -23,7 +23,11 @@
   margin: 20rpx;
   font-size: 30rpx;
   font-weight: 300;
+<<<<<<< Updated upstream
   color: #666;
+=======
+  color: #666 !important;
+>>>>>>> Stashed changes
 }
 .date {
   margin: 20rpx;
