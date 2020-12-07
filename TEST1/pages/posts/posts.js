@@ -12,9 +12,7 @@ Page({
   },
 
   onPostTap (event) {
-    console.log(event)
     var postId = event.currentTarget.dataset.postid;
-    console.log(postId)
     wx.navigateTo({
       url: 'post-detail/post-detail?id=' + postId
     })
