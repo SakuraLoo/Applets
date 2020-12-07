@@ -84,10 +84,10 @@
   background-color: #004DB8;
 }
 .shareBox {
-  background-color: #ddd;
-}
-.shareBox.active {
   background-color: #20868F;
+}
+.shareBox:active {
+  background-color: #185f66;
 }
 
 .article_text {
