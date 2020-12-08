@@ -43,27 +43,25 @@ Page({
 
   /*-- 点击收藏 --*/
   CollectClick () {
+
     var postsCollected = wx.getStorageSync('postsCollected'); // 获取缓存
     var collected = postsCollected[this.data.currentPostId];
-    collected = !collected; // 点击改变true/false
-    postsCollected[this.data.currentPostId] = collected;
-    wx.setStorageSync('postsCollected', postsCollected); // 修改缓存
-    this.setData({collected}); // 绑定数据
-
-    // // 提示信息
-    // wx.showToast({
-    //   title: collected ? "收藏成功" : "取消成功"
-    // })
 
     wx.showModal({
       title: "收藏",
-      content: "是否收藏",
+      content: collected ? "是否取消收藏" : "是否收藏",
       showCancel: true,
-      cancelText: "不收藏",
-      confirmText: "收藏",
+      cancelText: "取消",
+      confirmText: "确认",
       cancelColor: "#333",  
       confirmColor: "#405f80",
-      success:function() {
+      success: (res) => {
+        if(res.confirm) {
+          collected = !collected; // 点击改变true/false
+          postsCollected[this.data.currentPostId] = collected;
+          wx.setStorageSync('postsCollected', postsCollected); // 修改缓存
+          this.setData({collected}); // 绑定数据
+        }
       }
     })
   },
