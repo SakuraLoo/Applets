@@ -1,9 +1,10 @@
 {
   "pages": [
-    "pages/welcome/welcome",
-    "pages/posts/posts",
     "pages/posts/post-detail/post-detail",
-    "pages/index/index"
+    "pages/posts/posts",
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/demo/demo"
   ],
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
@@ -11,5 +12,24 @@
   "window": {
     "navigationBarBackgroundColor": "#5f6b72"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "borderStyle": "white",
+    "position": "bottom",
+    "selectedColor": "#16409C",
+    "list": [
+      {
+        "pagePath": "pages/posts/posts",
+        "text": "阅读",
+        "iconPath": "/images/icon/read.png",
+        "selectedIconPath": "/images/icon/read_active.png"
+      },
+      {
+        "pagePath": "pages/demo/demo",
+        "text": "Demo",
+        "iconPath": "/images/icon/demo.png",
+        "selectedIconPath": "/images/icon/demo_active.png"
+      }
+    ]
+  }
 }
